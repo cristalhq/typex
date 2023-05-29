@@ -57,3 +57,11 @@ func Do4[T, U, V, W any](t T, u U, v V, w W, err error) (T, U, V, W) {
 	}
 	return t, u, v, w
 }
+
+// If is just a ternary operator. Don't use it.
+func If[T any](c bool, a, b T) T {
+	if c {
+		return a
+	}
+	return b
+}
